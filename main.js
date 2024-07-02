@@ -29,10 +29,17 @@ function verificarRespuesta() {
       break;
   }
   if (respuestaUsuario === resultadoCorrecto) {
-    document.getElementById("resultado").innerText = "¡Correcto! Buen trabajo.";
+    document.getElementById("resultado").innerText =
+      "¡Correcto! Buen trabajo.";
+      //cambia el color del texto que aparece en caso correcto
+      document.getElementById("resultado").style.color = "green";
   } else {
     document.getElementById("resultado").innerText =
-      "Incorrecto, intenta de nuevo.";
+      "😥Incorrecto, intenta de nuevo.";
+      //cambia el color del texto que aparece en caso error
+      document.getElementById("resultado").style.color = "red";
+      
+
   }
   generarProblema();
 }
